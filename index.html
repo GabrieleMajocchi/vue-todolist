@@ -19,8 +19,14 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <div id="app">
-
+        <div class="todolist">
+            <ul>
+                <li v-for="(task, index) in arrayTodo" :class="task.done === true ? 'lined' : ''" @click="doneTask(index)">
+                    {{task.text}}
+                </li>
+            </ul>
+        </div>
     </div>
-    
+
 </body>
 </html>
