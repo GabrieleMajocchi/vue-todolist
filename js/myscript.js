@@ -20,8 +20,8 @@ createApp({
             this.arrayTodo.splice(taskindex, 1);
         },
         addTodo(todo){
-            if(todo === ''){
-
+            if(todo ===  undefined || todo === ''){
+                console.log('Scrivere un todo')
             }else{
             this.arrayTodo.push({text: todo, done: false});
             this.futureTodo = '';
