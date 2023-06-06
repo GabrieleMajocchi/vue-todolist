@@ -19,6 +19,12 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <div id="app">
+        <header>
+            <h1>To do list</h1>
+            <label for="newtodo">Inserisci un todo</label>
+            <input type="text" name="newtodo" v-model="futureTodo">
+            <button @click="addTodo(futureTodo)">Add todo!</button>
+        </header>
         <div class="todolist">
             <ul>
                 <li v-for="task in arrayTodo" :class="task.done === true ? 'lined' : ''" @click="doneTask(task)">

@@ -18,6 +18,14 @@ createApp({
         removeItem(task){
             const taskindex = this.arrayTodo.indexOf(task);
             this.arrayTodo.splice(taskindex, 1);
-        }
+        },
+        addTodo(todo){
+            if(todo === ''){
+
+            }else{
+            this.arrayTodo.push({text: todo, done: false});
+            this.futureTodo = '';
+            }
+        },
     }
 }).mount('#app');
