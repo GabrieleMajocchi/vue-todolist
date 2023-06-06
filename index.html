@@ -21,8 +21,11 @@
     <div id="app">
         <div class="todolist">
             <ul>
-                <li v-for="(task, index) in arrayTodo" :class="task.done === true ? 'lined' : ''" @click="doneTask(index)">
+                <li v-for="task in arrayTodo" :class="task.done === true ? 'lined' : ''" @click="doneTask(task)">
                     {{task.text}}
+                    <span>
+                        <i class="fa-solid fa-trash-can" @click="removeItem(task)"></i>
+                    </span>
                 </li>
             </ul>
         </div>

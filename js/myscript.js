@@ -12,8 +12,12 @@ createApp({
         }
     },
     methods: {
-        doneTask(index){
-            this.arrayTodo[index].done = !this.arrayTodo[index].done
+        doneTask(task){
+            task.done = !task.done;
+        },
+        removeItem(task){
+            const taskindex = this.arrayTodo.indexOf(task);
+            this.arrayTodo.splice(taskindex, 1);
         }
     }
 }).mount('#app');
